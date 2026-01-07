@@ -84,7 +84,7 @@ public class SampleConsumer {
           ReceiverOffset offset = record.receiverOffset();
           Instant timestamp = Instant.ofEpochMilli(record.timestamp());
           log.info(
-              "Received message: topic-partition=%s offset=%d timestamp=%s key=%d value=%s\n",
+              "Received message: topic-partition={} offset={} timestamp={} key={} value={}",
               offset.topicPartition(),
               offset.offset(),
               dateFormat.format(timestamp),
